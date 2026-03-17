@@ -20,4 +20,9 @@ jobs:
           java-version: '21'
           cache: 'maven'
       - name: Build with Maven
-        run: echo "now we build ..."
+        run: | # more than one line 
+          echo "now we build ..."
+          echo "clean up"
+          ./mvnw clean
+          echo "build package"
+          ./mvnw -D skipTests package
