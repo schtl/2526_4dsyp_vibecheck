@@ -28,4 +28,4 @@ jobs:
           ./mvnw -DskipTests package
           cp Docker/Dockerfile ./target
           docker build --tag ghcr.io/schtl/poswmc_4d_4:latest ./target
-          docker push ghcr.io/{{github.actor}}/poswmc_4d_4:latest
+          docker push ghcr.io/${{github.actor}}/poswmc_4d_4:latest
